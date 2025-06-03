@@ -24,7 +24,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Install your plugins here
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-fugitive',
+  'tpope/vim-fugitive', -- For full git integration with :Git and :Gdiffsplit
   require 'plugins.themes.catppuccin',
   require 'plugins.gitsigns',
   require 'plugins.whichkey',
