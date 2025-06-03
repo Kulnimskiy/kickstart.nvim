@@ -33,7 +33,7 @@ return {
       formatting.stylua,
       formatting.shfmt.with { args = { '-i', '4' } },
       formatting.terraform_fmt,
-      require('none-ls.formatting.ruff').with { extra_args = { '--extend-select', 'I' } },
+      require('none-ls.formatting.ruff').with { extra_args = { '--extend-select', 'I', '--target-version=py311', '--line-length=100' } },
       require 'none-ls.formatting.ruff_format',
     }
 

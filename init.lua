@@ -20,7 +20,6 @@ vim.opt.mouse = 'a'
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
-
 vim.opt.clipboard = 'unnamedplus'
 
 -- Enable break indent
@@ -655,7 +654,18 @@ require('lazy').setup({
       }
     end,
   },
-
+  { -- Autosave in nvim
+    'Pocco81/auto-save.nvim',
+    config = function()
+      require('auto-save').setup {
+        debounce_delay = 135,
+        condition = function(buf)
+          return vim.fn.getbufvar(buf, '&modifiable') == 1
+        end,
+      }
+    end,
+    automatic_installation = true,
+  },
   { -- Autocompletion
     'saghen/blink.cmp',
     event = 'VimEnter',
