@@ -39,7 +39,7 @@ require('lazy').setup({
   require 'plugins.autopairs',
   require 'plugins.neo-tree',
   require 'plugins.harpoon',
-
+  require 'plugins.comments',
   { import = 'custom.plugins' },
 }, {
 
